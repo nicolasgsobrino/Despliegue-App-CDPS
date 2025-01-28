@@ -375,14 +375,11 @@ http://<IP-EXTERNA>:9080
 Ejemplo (según nuestro despliegue):
 
 ```
-http://34.175.221.139:9080
+http://<IP EXTERNA>:9080/productpage
 ```
 
 ---
 
-Aquí tienes el contenido para el archivo **README.md** del Bloque 4:
-
----
 
 # **Despliegue de la aplicación en microservicios usando Kubernetes (Bloque 4)**
 
