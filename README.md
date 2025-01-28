@@ -100,8 +100,11 @@ La app se puede ejecutar en la propia maquina virtual de Google Cloud ejecutando
 # Bloque 2. Despliegue de Aplicación Monolítica usando Docker
 
 Este documento proporciona una guía paso a paso para desplegar una aplicación monolítica utilizando Docker de forma automatizada mediante un script en Python.
+
 El scrypt realiza todo, comprueba que docker este descargado, si no, lo instala, clona el repositorio, ejecuta los comando correspondientes y despliega la app en local. 
+
 Tambien se puede desplegar en la VM de google cloud como hemos hecho en el bloque1 pero en este caso queríamos cambiar para ver otro enfoque. 
+
 En el caso de desplegar en VM habría que subir los archivos y añadir una nueva regla del FW para que permita peticiones al puerto 5080. 
 
 ---
