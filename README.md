@@ -56,7 +56,7 @@ Esto realizará:
 La aplicación será accesible en la URL:
 
 ```
-http://34.175.77.229:9080/productpage
+http://<IP PUBLICA VM>:9080/productpage
 ```
 
 Para detener la aplicación y eliminar los archivos generados, ejecutar:
