@@ -1,0 +1,18 @@
+# Usar la imagen base ruby
+FROM ruby:2.7.1-slim
+
+# Exponer el puerto 9080
+EXPOSE 9080
+
+# Copiar el archivo de detalles a la ubicación correcta
+COPY practica_creativa2/bookinfo/src/details/details.rb /opt/microservices/
+
+# Configurar el directorio de trabajo
+WORKDIR /opt/microservices/
+
+# Definir variables de entorno
+ENV SERVICE_VERSION=v1
+ENV ENABLE_EXTERNAL_BOOK_SERVICE=true
+
+# Ejecutar el servicio
+CMD ["ruby", "details.rb", "9080"]

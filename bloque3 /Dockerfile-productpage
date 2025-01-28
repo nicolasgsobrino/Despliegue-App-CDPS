@@ -1,0 +1,20 @@
+# Usar la imagen base proporcionada
+FROM python:3.7.7-slim
+
+# Establecer la variable de entorno del grupo
+ENV GROUP_NUMBER=14
+
+# Exponer el puerto 9080
+EXPOSE 9080
+
+# Instalar herramientas necesarias
+RUN apt-get update && apt-get install -y git sudo python3-pip && \
+    git clone https://github.com/CDPS-ETSIT/practica_creativa2.git && \
+    pip3 install -r practica_creativa2/bookinfo/src/productpage/requirements.txt && \
+    pip3 install --upgrade requests
+
+# Configurar el directorio de trabajo
+WORKDIR /practica_creativa2/bookinfo/src/productpage
+
+# Ejecutar la aplicación
+CMD ["python3", "productpage.py", "9080"]

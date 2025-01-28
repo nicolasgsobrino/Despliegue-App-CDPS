@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: details
+  labels:
+    app: details
+    service: details
+spec:
+  type: ClusterIP
+  ports:
+  - port: 9080
+    name: http
+  selector:
+    app: details
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: details-v1
+  labels:
+    app: details
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: details
+  template:
+    metadata:
+      labels:
+        app: details
+    spec:
+      containers:
+        - name: details
+          image: ngsobrino/details:latest
+          ports:
+            - containerPort: 9081
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "128Mi"
+            limits:
+              cpu: "400m"
+              memory: "256Mi"

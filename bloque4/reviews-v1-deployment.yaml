@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reviews-v1
+  labels:
+    app: reviews
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reviews
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: reviews
+        version: v1
+    spec:
+      containers:
+        - name: reviews
+          image: ngsobrino/reviews:latest
+          ports:
+            - containerPort: 9083
+          env:
+            - name: ENABLE_RATINGS
+              value: "false"
+          resources:
+            requests:
+              cpu: "100m"      # 0.1 CPU (Reducido para evitar problemas de programación)
+              memory: "128Mi"  # 128 MB RAM
+            limits:
+              cpu: "250m"      # 0.25 CPU
+              memory: "256Mi"  # 256 MB RAM
