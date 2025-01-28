@@ -369,12 +369,6 @@ Este comando realiza las siguientes acciones:
 Una vez que la aplicación está en ejecución en la VM de Google Cloud, puedes acceder a la interfaz web de la aplicación mediante:
 
 ```
-http://<IP-EXTERNA>:9080
-```
-
-Ejemplo (según nuestro despliegue):
-
-```
 http://<IP EXTERNA>:9080/productpage
 ```
 
