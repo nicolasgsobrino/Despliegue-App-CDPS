@@ -43,7 +43,7 @@ def clean_application():
 # Función principal para manejar comandos desde CLI
 def main():
     if len(sys.argv) < 2:
-        print("Uso: python3 deploy_microservices.py [start|stop|clean]")
+        print("Uso: python3 deploy_microservices.py [start|stop|delete]")
         sys.exit(1)
 
     command = sys.argv[1]
