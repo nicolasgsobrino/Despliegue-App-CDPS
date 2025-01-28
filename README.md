@@ -509,7 +509,7 @@ Este comando realiza las siguientes acciones:
    Utiliza la IP externa del servicio `productpage` para acceder a la aplicación:
 
    ```
-   http://<IP asignada al productpage>:9080
+   http://<IP asignada al productpage>:9080/productpage
    ```
 
 ---
