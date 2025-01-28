@@ -230,10 +230,6 @@ Tambien se puede ejecutar desde un terminal remoto utilizando ssh usuario@34.175
 
 ---
 
-Aquí tienes el contenido para el archivo **README.md** del Bloque 3:
-
----
-
 # **Bloque 3. Despliegue de la aplicación en microservicios**
 
 Este proyecto despliega una aplicación basada en microservicios utilizando **Docker Compose**, segmentando los servicios de una aplicación monolítica para ejecutarlos de manera independiente.
