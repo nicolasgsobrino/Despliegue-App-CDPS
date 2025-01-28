@@ -77,7 +77,7 @@ def run_container():
         "-e", f"GROUP_NUM={GROUP_NUM}",
         "-d", IMAGE_NAME
     ])
-    print(f" La aplicación está disponible en http://localhost:{PORT}")
+    print(f" La aplicación está disponible en http://localhost:{PORT}/productpage")
 
 def delete_container():
     """Detiene y elimina el contenedor de Docker."""
